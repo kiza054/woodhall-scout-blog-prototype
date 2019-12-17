@@ -1,0 +1,101 @@
+2019-11-24 17:54:07,618 ERROR: Exception on /edit_profile [POST] [in /home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/ubuntu/blog/app/main/routes.py", line 91, in edit_profile
+    return redirect(url_for('main.user'))
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/helpers.py", line 370, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py", line 2215, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/helpers.py", line 358, in url_for
+    endpoint, values, method=method, force_external=external
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/werkzeug/routing.py", line 2020, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'main.user'. Did you forget to specify values ['username']?
+2019-11-24 17:55:40,079 INFO: Microblog startup [in /home/ubuntu/blog/app/__init__.py:66]
+2019-11-24 17:55:54,992 ERROR: Exception on /edit_profile [POST] [in /home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/ubuntu/blog/app/main/routes.py", line 91, in edit_profile
+    return redirect(url_for('main.user'))
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/helpers.py", line 370, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py", line 2215, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/helpers.py", line 358, in url_for
+    endpoint, values, method=method, force_external=external
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/werkzeug/routing.py", line 2020, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'main.user'. Did you forget to specify values ['username']?
+2019-11-24 17:59:59,279 INFO: Microblog startup [in /home/ubuntu/blog/app/__init__.py:66]
+2019-11-24 18:00:17,489 ERROR: Exception on /edit_profile [POST] [in /home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/ubuntu/blog/app/main/routes.py", line 91, in edit_profile
+    return redirect(url_for('main.user'))
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/helpers.py", line 370, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py", line 2215, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/helpers.py", line 358, in url_for
+    endpoint, values, method=method, force_external=external
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/werkzeug/routing.py", line 2020, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'main.user'. Did you forget to specify values ['username']?
+2019-11-24 18:01:18,402 INFO: Microblog startup [in /home/ubuntu/blog/app/__init__.py:66]
+2019-11-24 18:02:46,871 INFO: Microblog startup [in /home/ubuntu/blog/app/__init__.py:66]
+2019-11-24 18:07:46,394 INFO: Microblog startup [in /home/ubuntu/blog/app/__init__.py:66]
+2019-11-24 18:10:17,373 INFO: Microblog startup [in /home/ubuntu/blog/app/__init__.py:66]
+2019-11-24 18:12:18,579 INFO: Microblog startup [in /home/ubuntu/blog/app/__init__.py:66]
+2019-11-24 18:13:10,866 INFO: Microblog startup [in /home/ubuntu/blog/app/__init__.py:66]
+2019-11-24 18:13:58,884 INFO: Microblog startup [in /home/ubuntu/blog/app/__init__.py:66]
+2019-11-24 18:15:49,192 INFO: Microblog startup [in /home/ubuntu/blog/app/__init__.py:66]
+2019-11-24 18:25:06,504 INFO: Microblog startup [in /home/ubuntu/blog/app/__init__.py:66]
+2019-11-24 18:42:51,979 INFO: Microblog startup [in /home/ubuntu/blog/app/__init__.py:66]
+2019-11-24 19:47:22,791 INFO: Microblog startup [in /home/ubuntu/blog/app/__init__.py:66]
+2019-11-24 19:47:23,615 INFO: Microblog startup [in /home/ubuntu/blog/app/__init__.py:66]

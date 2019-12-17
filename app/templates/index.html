@@ -1,0 +1,33 @@
+{% import 'bootstrap/wtf.html' as wtf %}
+{% include 'header.html' %}
+
+<body>
+
+  {% include 'nav.html' %}
+  
+    <div class="container-fluid">
+      <div class="row">
+        
+        {% include 'sidebar.html' %}  
+        <div class="content-section-index">
+          <div class="media">
+            <div class="media-body">
+              <div>
+                <h1>Hello, {{ current_user.username }}</h1>
+                <h4>Welcome to 1st Woodhall Scout Group's Blog</h4>
+                <hr>
+                {% if form %}
+                {{ wtf.quick_form(form, submit, button_map={'submit':'primary'}) }}
+                <br>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        </div>
+        
+    </div>
+  </div>
+
+{% include 'footer.html' %}
+
+</body>

@@ -1,0 +1,121 @@
+2019-11-27 18:04:40,456 ERROR: Exception on /admin/ [GET] [in /home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask_admin/base.py", line 69, in inner
+    return self._run_view(f, *args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask_admin/base.py", line 368, in _run_view
+    return fn(self, *args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask_admin/model/base.py", line 1943, in index_view
+    delete_form = self.delete_form()
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask_admin/model/base.py", line 1357, in delete_form
+    return self._delete_form_class()
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/wtforms/form.py", line 212, in __call__
+    return type.__call__(cls, *args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask_admin/form/__init__.py", line 16, in __init__
+    super(BaseForm, self).__init__(formdata=formdata, obj=obj, prefix=prefix, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/wtforms/form.py", line 272, in __init__
+    super(Form, self).__init__(self._unbound_fields, meta=meta_obj, prefix=prefix)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/wtforms/form.py", line 52, in __init__
+    field = meta.bind_field(self, unbound_field, options)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/wtforms/meta.py", line 27, in bind_field
+    return unbound_field.bind(form=form, **options)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/wtforms/fields/core.py", line 353, in bind
+    return self.field_class(*self.args, **kw)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/wtforms/fields/core.py", line 110, in __init__
+    self.label = Label(self.id, label if label is not None else self.gettext(_name.replace('_', ' ').title()))
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/wtforms/fields/core.py", line 166, in gettext
+    return self._translations.gettext(string)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask_admin/babel.py", line 55, in gettext
+    t = wtforms_domain.get_translations()
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask_babelex/__init__.py", line 510, in get_translations
+    locale = get_locale()
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask_babelex/__init__.py", line 224, in get_locale
+    locale = babel.load_locale(rv)
+AttributeError: 'Babel' object has no attribute 'load_locale'
+2019-11-27 18:04:57,470 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:60]
+2019-11-27 18:07:28,791 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:63]
+2019-11-27 18:08:07,188 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:63]
+2019-11-27 18:11:38,200 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:63]
+2019-11-27 18:11:41,318 ERROR: Exception on / [GET] [in /home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/ubuntu/blog/app/main/routes.py", line 43, in index
+    return render_template('index.html', title=_('Home'), form=form,
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask_babel/__init__.py", line 552, in gettext
+    t = get_translations()
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask_babel/__init__.py", line 224, in get_translations
+    for dirname in babel.translation_directories:
+AttributeError: 'Babel' object has no attribute 'translation_directories'
+2019-11-27 18:13:44,866 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:63]
+2019-11-27 18:13:46,902 ERROR: Exception on / [GET] [in /home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/ubuntu/blog/app/main/routes.py", line 43, in index
+    return render_template('index.html', title=_('Home'), form=form,
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask_babel/__init__.py", line 552, in gettext
+    t = get_translations()
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask_babel/__init__.py", line 224, in get_translations
+    for dirname in babel.translation_directories:
+AttributeError: 'Babel' object has no attribute 'translation_directories'
+2019-11-27 18:17:34,103 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:63]
+2019-11-27 18:17:36,847 ERROR: Exception on / [GET] [in /home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/ubuntu/blog/app/main/routes.py", line 43, in index
+    return render_template('index.html', title=_('Home'), form=form,
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask_babel/__init__.py", line 552, in gettext
+    t = get_translations()
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask_babel/__init__.py", line 224, in get_translations
+    for dirname in babel.translation_directories:
+AttributeError: 'Babel' object has no attribute 'translation_directories'
+2019-11-27 18:18:06,204 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:62]

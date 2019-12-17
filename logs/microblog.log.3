@@ -1,0 +1,73 @@
+2019-11-24 17:35:03,176 ERROR: Exception on / [GET] [in /home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1182, in _execute_context
+    context)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 470, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such column: user.childs_section
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py", line 1947, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py", line 2241, in preprocess_request
+    rv = func()
+  File "/home/ubuntu/blog/app/main/routes.py", line 15, in before_request
+    if current_user.is_authenticated:
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/werkzeug/local.py", line 348, in __getattr__
+    return getattr(self._get_current_object(), name)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/werkzeug/local.py", line 307, in _get_current_object
+    return self.__local()
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask_login/utils.py", line 26, in <lambda>
+    current_user = LocalProxy(lambda: _get_user())
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask_login/utils.py", line 335, in _get_user
+    current_app.login_manager._load_user()
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask_login/login_manager.py", line 359, in _load_user
+    return self.reload_user()
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask_login/login_manager.py", line 321, in reload_user
+    user = self.user_callback(user_id)
+  File "/home/ubuntu/blog/app/models.py", line 182, in load_user
+    return User.query.get(int(id))
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/sqlalchemy/orm/query.py", line 864, in get
+    return self._get_impl(ident, loading.load_on_ident)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/sqlalchemy/orm/query.py", line 897, in _get_impl
+    return fallback_fn(self, key)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/sqlalchemy/orm/loading.py", line 223, in load_on_ident
+    return q.one()
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/sqlalchemy/orm/query.py", line 2814, in one
+    ret = self.one_or_none()
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/sqlalchemy/orm/query.py", line 2784, in one_or_none
+    ret = list(self)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/sqlalchemy/orm/query.py", line 2855, in __iter__
+    return self._execute_and_instances(context)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/sqlalchemy/orm/query.py", line 2878, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 945, in execute
+    return meth(self, multiparams, params)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/sqlalchemy/sql/elements.py", line 263, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1053, in _execute_clauseelement
+    compiled_sql, distilled_params
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1189, in _execute_context
+    context)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1402, in _handle_dbapi_exception
+    exc_info
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 203, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 186, in reraise
+    raise value.with_traceback(tb)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1182, in _execute_context
+    context)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 470, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such column: user.childs_section [SQL: 'SELECT user.id AS user_id, user.username AS user_username, user.email AS user_email, user.password_hash AS user_password_hash, user.about_me AS user_about_me, user.childs_section AS user_childs_section, user.last_seen AS user_last_seen, user.is_admin AS user_is_admin, user.last_message_read_time AS user_last_message_read_time, user.token AS user_token, user.token_expiration AS user_token_expiration \nFROM user \nWHERE user.id = ?'] [parameters: (2,)]
+2019-11-24 17:35:18,981 INFO: Microblog startup [in /home/ubuntu/blog/app/__init__.py:66]
