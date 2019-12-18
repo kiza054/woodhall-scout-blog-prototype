@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+<body style="background: #40e0d0 !important;">
+  <center>
+      <div class="content-section">
+        <div class="media">
+          <div class="media-body">
+            <img src="{{ url_for('static', filename='images/beavers.jpg') }}" style="float:left;" alt="Beaver Logo" class="responsive_1" style="height: 290px; width: 80px;"><img src="{{ url_for('static', filename='images/woodhall.png') }}" style="float:right;" alt="Woodhall Logo" class="responsive_2" style="height: 690px; width: 78px;">
+            <br><br><br><br><hr>
+            <h3>Our Beavers meet every Thursday during term time between 18:00 and 19:10 in the church hall at St James the Great, Galloway Lane.</h3>
+            <h3>Please note that, due to continued growth, our Beaver Colony is currently full. We have a waiting list in operation for new places. If you would like your child to be added to this, <strong>please contact the Beaver leader team.</strong></h3>
+            <hr>
+            <h4>At 1st Woodhall, the Beaver leaders are Badger and sometimes assisted by parents (Thank You!). Being based on Galloway Lane, we are easy to get to from West Leeds and East Bradford, including Pudsey, Thornbury, Farsley, Calverley, Rodley and Bramley. If you are interested in your child becoming a Beaver, contact us.</h4>
+            <h4>Beavers, or more correctly Beaver Scouts, are the youngest group of the Scouting family aged from five years and nine months to eight years. Their activities are based around being creative, crafty things, learning about camping, playing games, getting out and about and finding out about nature, learning how to be a good scout, and especially how to be a good friend.
+                Beavers are easily recognised by the turquoise jumpers as seen in the image. these have the logo on the bottom right hand side of the jumper, also personalised t-shirts are available for a small cost of £5 which are mainly used for camps and sleepovers.</h4>
+            <h4>The cost of attending Beavers is £2 per week (the first 4 weeks are free). Unfortunately, we have to ask for subs for any missed weeks. This is because the District, County and National teams charge 1st Woodhall fees on a per member basis, and we do have to make sure the group can cover these costs.</h4>
+            <h4>Beavers will need a uniform before they can be invested into the colony. Uniforms can be purchased from West Leeds Scout Shop. Currently, we only ask that Beavers have a uniform sweatshirt and necker (our necker is black with a white border).</h4>
+            <table class="beaver_table">
+              <thead>
+                <tr>
+                  <th>Section</th>
+                  <th>Meeting Day</th>
+                  <th>Meeting Time</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Beavers (5yrs 9mths to 8yrs)</td>
+                  <td>Thursday</td>
+                  <td>6:00pm – 7:10pm</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+  </center>
+</body>
+{% endblock %}

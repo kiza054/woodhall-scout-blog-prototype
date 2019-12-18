@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+<body style="background: #1a2d30 !important;">
+  <center>
+      <div class="content-section">
+        <div class="media">
+          <div class="media-body">
+            <img src="{{ url_for('static', filename='images/scouts.jpg') }}" style="float:left;" alt="Scouts Logo" class="responsive_4" style="height: 290px; width: 64px;"><img src="{{ url_for('static', filename='images/woodhall.png') }}" style="float:right;" alt="Woodhall Logo" class="responsive_2" style="height: 690px; width: 78px;">
+            <br><br><br><br>
+            <h3><strong></strong></h3>
+            <hr>
+            <h4>‘Scouting’ is about outdoor activities: camping, caving, abseiling, getting wet for the fun of it, cooking skills, bivouacking (camping without a tent), and camping in winter. Scouts wear a dark green long sleeved shirt and can be purchased from West Leeds Scout Shop (our Necker is black with a white border).</h4>
+            <h4>As with the other sections, scouts work towards awards & activity badges, with the highest award being the Gold Chief Scout’s Award, which involves completing a number of activities and challenges during their time in the Scout Section. The scouts will learn many skills old & new which (including first aid) which could well be useful for them later in life.</h4>
+            <h4>Young people can join from the age of about ten and move on to Explorers at thirteen and a half. Like cubs they are organised into small groups called Patrols each of which has a Patrol Leader in charge.</h4>
+            <h4>1st Woodhall scouts are lead by a team of volunteers: Alan, Brian & Mike</h4>
+            <hr>
+            <table class="scout_table">
+              <thead>
+                <tr>
+                  <th>Section</th>
+                  <th>Meeting Day</th>
+                  <th>Meeting Time</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Scouts (10-14yrs)</td>
+                  <td>Thursday</td>
+                  <td>7:00pm – 9:00pm</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+  </center>
+</body>
+{% endblock %}

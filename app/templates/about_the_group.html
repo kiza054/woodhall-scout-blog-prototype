@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+<center>
+    <div class="content-section">
+      <div class="media">
+        <div class="media-body">
+          <img src="{{ url_for('static', filename='images/necker.png') }}" style="float:center;" alt="Necker">
+          <hr>
+          <h3>1st Woodhall Scouts is located at St James the Great Church on Galloway Lane, Pudsey, Leeds, LS28 8RA and has been established since 1957.</h3>
+          <h3>Scouting is a world wide value based institution. 1st Woodhall is an active and friendly group and welcome boys and girls from all backgrounds and all religious beliefs to make new friends, get outdoors, learn exciting skills and most importantly have fun!</h3>
+          <h3>If you want to find out more, please browse our section pages</h3>
+          <a href="{{ url_for('main.about_beavers') }}" class="btn btn-primary btn-lg" id="button1">Beavers</a> <a href="{{ url_for('main.about_cubs') }}" class="btn btn-primary btn-lg" id="button2">Cubs</a>  <a href="{{ url_for('main.about_scouts') }}" class="btn btn-primary btn-lg" id="button3">Scouts</a>
+        </div>
+      </div>
+    </div>
+</center>
+{% endblock %}
