@@ -1,8 +1,11 @@
-{% extends "base.html" %}
-
+{% import 'bootstrap/wtf.html' as wtf %}
+{% include 'header.html' %}
 {% block content %}
 <body>
+
+    {% include 'nav.html' %}
     <center>
+      {% include 'sidebar.html' %}
       <div class="content-section">
         <div class="media">
           <div class="media-body">
@@ -52,5 +55,8 @@
         </div>
       </div>
     </center>
+
+{% include 'footer.html' %}
+
 </body>
 {% endblock %}

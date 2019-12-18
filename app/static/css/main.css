@@ -14,9 +14,10 @@ body {
   padding: 10px 20px;
   border: 1px solid #dddddd;
   border-radius: 3px;
+  margin-left: 300px;
   margin-top: 20px;
   margin-bottom: 20px;
-  max-width: 1200px;
+  max-width: 1000px;
 }
 
 /* Creates a white box in the middle of the index page */

@@ -1,14 +1,21 @@
-{% extends "base.html" %}
+{% include 'header.html' %}
 
 {% block app_content %}
-<center>
-    <div class="content-section">
-        <div class="media">
-            <div class="media-body">
-                <h1>{{ _('Page Not Found') }}</h1>
-                <p><a href="{{ url_for('main.index') }}">{{ _('Back') }}</a></p>
+<body>
+
+    {% include 'nav.html' %}
+    <center>
+        <div class="content-section">
+            <div class="media">
+                <div class="media-body">
+                    <h1>{{ _('Page Not Found') }}</h1>
+                    <p><a href="{{ url_for('main.index') }}">{{ _('Back') }}</a></p>
+                </div>
             </div>
         </div>
-    </div>
-</center>
+    </center>
+
+{% include 'footer.html' %}
+
+</body>
 {% endblock %}

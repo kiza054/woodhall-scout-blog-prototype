@@ -1,119 +1,104 @@
-2019-11-27 18:18:13,786 ERROR: Exception on /admin/ [GET] [in /home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py:1891]
-Traceback (most recent call last):
-  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py", line 1820, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
-    raise value
-  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py", line 1935, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask_admin/base.py", line 69, in inner
-    return self._run_view(f, *args, **kwargs)
-  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask_admin/base.py", line 368, in _run_view
-    return fn(self, *args, **kwargs)
-  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask_admin/model/base.py", line 1943, in index_view
-    delete_form = self.delete_form()
-  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask_admin/model/base.py", line 1357, in delete_form
-    return self._delete_form_class()
-  File "/home/ubuntu/.local/lib/python3.7/site-packages/wtforms/form.py", line 212, in __call__
-    return type.__call__(cls, *args, **kwargs)
-  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask_admin/form/__init__.py", line 16, in __init__
-    super(BaseForm, self).__init__(formdata=formdata, obj=obj, prefix=prefix, **kwargs)
-  File "/home/ubuntu/.local/lib/python3.7/site-packages/wtforms/form.py", line 272, in __init__
-    super(Form, self).__init__(self._unbound_fields, meta=meta_obj, prefix=prefix)
-  File "/home/ubuntu/.local/lib/python3.7/site-packages/wtforms/form.py", line 52, in __init__
-    field = meta.bind_field(self, unbound_field, options)
-  File "/home/ubuntu/.local/lib/python3.7/site-packages/wtforms/meta.py", line 27, in bind_field
-    return unbound_field.bind(form=form, **options)
-  File "/home/ubuntu/.local/lib/python3.7/site-packages/wtforms/fields/core.py", line 353, in bind
-    return self.field_class(*self.args, **kw)
-  File "/home/ubuntu/.local/lib/python3.7/site-packages/wtforms/fields/core.py", line 110, in __init__
-    self.label = Label(self.id, label if label is not None else self.gettext(_name.replace('_', ' ').title()))
-  File "/home/ubuntu/.local/lib/python3.7/site-packages/wtforms/fields/core.py", line 166, in gettext
-    return self._translations.gettext(string)
-  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask_admin/babel.py", line 55, in gettext
-    t = wtforms_domain.get_translations()
-  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask_babelex/__init__.py", line 510, in get_translations
-    locale = get_locale()
-  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask_babelex/__init__.py", line 224, in get_locale
-    locale = babel.load_locale(rv)
-AttributeError: 'Babel' object has no attribute 'load_locale'
-2019-11-27 18:21:12,180 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:63]
-2019-11-27 18:22:59,097 ERROR: Exception on / [GET] [in /home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py:1891]
-Traceback (most recent call last):
-  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py", line 1820, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
-    raise value
-  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py", line 1935, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask_login/utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "/home/ubuntu/blog/app/main/routes.py", line 43, in index
-    return render_template('index.html', title=_('Home'), form=form,
-  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask_babel/__init__.py", line 552, in gettext
-    t = get_translations()
-  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask_babel/__init__.py", line 224, in get_translations
-    for dirname in babel.translation_directories:
-AttributeError: 'Babel' object has no attribute 'translation_directories'
-2019-11-27 18:24:16,109 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:62]
-2019-11-27 18:24:36,914 ERROR: Exception on /admin/ [GET] [in /home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py:1891]
-Traceback (most recent call last):
-  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py", line 1820, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
-    raise value
-  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py", line 1935, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask_admin/base.py", line 69, in inner
-    return self._run_view(f, *args, **kwargs)
-  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask_admin/base.py", line 368, in _run_view
-    return fn(self, *args, **kwargs)
-  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask_admin/model/base.py", line 1943, in index_view
-    delete_form = self.delete_form()
-  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask_admin/model/base.py", line 1357, in delete_form
-    return self._delete_form_class()
-  File "/home/ubuntu/.local/lib/python3.7/site-packages/wtforms/form.py", line 212, in __call__
-    return type.__call__(cls, *args, **kwargs)
-  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask_admin/form/__init__.py", line 16, in __init__
-    super(BaseForm, self).__init__(formdata=formdata, obj=obj, prefix=prefix, **kwargs)
-  File "/home/ubuntu/.local/lib/python3.7/site-packages/wtforms/form.py", line 272, in __init__
-    super(Form, self).__init__(self._unbound_fields, meta=meta_obj, prefix=prefix)
-  File "/home/ubuntu/.local/lib/python3.7/site-packages/wtforms/form.py", line 52, in __init__
-    field = meta.bind_field(self, unbound_field, options)
-  File "/home/ubuntu/.local/lib/python3.7/site-packages/wtforms/meta.py", line 27, in bind_field
-    return unbound_field.bind(form=form, **options)
-  File "/home/ubuntu/.local/lib/python3.7/site-packages/wtforms/fields/core.py", line 353, in bind
-    return self.field_class(*self.args, **kw)
-  File "/home/ubuntu/.local/lib/python3.7/site-packages/wtforms/fields/core.py", line 110, in __init__
-    self.label = Label(self.id, label if label is not None else self.gettext(_name.replace('_', ' ').title()))
-  File "/home/ubuntu/.local/lib/python3.7/site-packages/wtforms/fields/core.py", line 166, in gettext
-    return self._translations.gettext(string)
-  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask_admin/babel.py", line 55, in gettext
-    t = wtforms_domain.get_translations()
-  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask_babelex/__init__.py", line 510, in get_translations
-    locale = get_locale()
-  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask_babelex/__init__.py", line 224, in get_locale
-    locale = babel.load_locale(rv)
-AttributeError: 'Babel' object has no attribute 'load_locale'
-2019-11-27 18:27:35,776 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:62]
-2019-11-28 13:14:47,620 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:62]
-2019-11-28 13:17:47,698 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:62]
-2019-11-28 13:18:59,495 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:62]
+2019-12-03 16:51:44,567 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:83]
+2019-12-04 12:05:46,868 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:65]
+2019-12-04 12:05:46,869 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:83]
+2019-12-04 12:05:46,869 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:83]
+2019-12-04 12:06:57,969 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:65]
+2019-12-04 12:06:57,970 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:83]
+2019-12-04 12:06:57,970 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:83]
+2019-12-04 12:07:40,186 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:65]
+2019-12-04 12:07:40,186 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:83]
+2019-12-04 12:07:40,186 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:83]
+2019-12-04 12:07:58,211 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:65]
+2019-12-04 12:07:58,211 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:83]
+2019-12-04 12:07:58,211 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:83]
+2019-12-04 12:45:16,909 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:65]
+2019-12-04 12:45:16,909 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:83]
+2019-12-04 12:45:16,909 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:83]
+2019-12-04 12:46:47,508 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:65]
+2019-12-04 12:46:47,508 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:83]
+2019-12-04 12:46:47,508 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:83]
+2019-12-04 12:48:41,307 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:65]
+2019-12-04 12:48:41,307 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:83]
+2019-12-04 12:48:41,307 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:83]
+2019-12-04 12:49:34,069 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:65]
+2019-12-04 12:49:34,069 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:83]
+2019-12-04 12:49:34,069 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:83]
+2019-12-04 12:50:10,103 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:65]
+2019-12-04 12:50:10,104 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:83]
+2019-12-04 12:50:10,104 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:83]
+2019-12-04 14:12:44,084 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:69]
+2019-12-04 14:12:44,165 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:87]
+2019-12-04 14:12:44,165 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:87]
+2019-12-04 14:12:44,908 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:69]
+2019-12-04 14:12:44,909 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:87]
+2019-12-04 14:12:44,909 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:87]
+2019-12-04 14:13:46,269 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:69]
+2019-12-04 14:13:46,269 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:87]
+2019-12-04 14:13:46,269 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:87]
+2019-12-04 14:13:47,077 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:69]
+2019-12-04 14:13:47,077 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:87]
+2019-12-04 14:13:47,077 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:87]
+2019-12-04 14:14:30,364 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:69]
+2019-12-04 14:14:30,365 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:87]
+2019-12-04 14:14:30,365 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:87]
+2019-12-04 14:14:35,410 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:69]
+2019-12-04 14:14:35,410 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:87]
+2019-12-04 14:14:35,410 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:87]
+2019-12-04 14:14:43,078 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:69]
+2019-12-04 14:14:43,079 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:87]
+2019-12-04 14:14:43,079 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:87]
+2019-12-04 14:14:44,777 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:69]
+2019-12-04 14:14:44,778 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:87]
+2019-12-04 14:14:44,778 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:87]
+2019-12-04 14:18:16,469 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:69]
+2019-12-04 14:18:16,469 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:87]
+2019-12-04 14:18:16,469 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:87]
+2019-12-04 14:18:46,890 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:69]
+2019-12-04 14:18:46,891 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:87]
+2019-12-04 14:18:46,891 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:87]
+2019-12-04 14:23:12,681 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:70]
+2019-12-04 14:23:12,682 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:88]
+2019-12-04 14:23:12,682 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:88]
+2019-12-04 14:23:19,576 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:70]
+2019-12-04 14:23:19,576 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:88]
+2019-12-04 14:23:19,576 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:88]
+2019-12-04 14:23:29,575 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:70]
+2019-12-04 14:23:29,575 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:88]
+2019-12-04 14:23:29,575 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:88]
+2019-12-04 14:24:41,699 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:70]
+2019-12-04 14:24:41,699 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:88]
+2019-12-04 14:24:41,699 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:88]
+2019-12-04 14:24:51,287 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:70]
+2019-12-04 14:24:51,287 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:88]
+2019-12-04 14:24:51,287 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:88]
+2019-12-04 14:26:16,989 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:70]
+2019-12-04 14:26:16,990 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:88]
+2019-12-04 14:26:16,990 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:88]
+2019-12-04 14:30:30,771 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:67]
+2019-12-04 14:30:30,772 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:85]
+2019-12-04 14:30:30,772 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:85]
+2019-12-04 14:30:35,172 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:70]
+2019-12-04 14:30:35,172 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:88]
+2019-12-04 14:30:35,172 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:88]
+2019-12-04 14:31:47,966 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:70]
+2019-12-04 14:31:47,966 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:88]
+2019-12-04 14:31:47,966 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:88]
+2019-12-04 14:31:54,270 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:70]
+2019-12-04 14:31:54,270 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:88]
+2019-12-04 14:31:54,270 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:88]
+2019-12-04 14:32:15,271 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:70]
+2019-12-04 14:32:15,272 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:88]
+2019-12-04 14:32:15,272 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:88]
+2019-12-04 14:32:59,289 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:70]
+2019-12-04 14:32:59,289 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:88]
+2019-12-04 14:32:59,289 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:88]
+2019-12-04 14:33:08,283 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:70]
+2019-12-04 14:33:08,283 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:88]
+2019-12-04 14:33:08,283 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:88]
+2019-12-04 14:38:11,776 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:70]
+2019-12-04 14:38:11,777 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:88]
+2019-12-04 14:38:11,777 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:88]
+2019-12-04 16:16:13,282 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:67]
+2019-12-04 16:16:13,282 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:85]
+2019-12-04 16:16:13,282 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:85]
+2019-12-04 16:16:40,172 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:67]

@@ -1,4 +1,4 @@
-2019-11-27 09:35:11,006 ERROR: Exception on /admin/ [GET] [in /home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py:1891]
+2019-12-01 11:48:02,066 ERROR: Exception on /home [GET] [in /home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py:1891]
 Traceback (most recent call last):
   File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
     response = self.full_dispatch_request()
@@ -12,14 +12,10 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py", line 1935, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask_admin/base.py", line 69, in inner
-    return self._run_view(f, *args, **kwargs)
-  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask_admin/base.py", line 368, in _run_view
-    return fn(self, *args, **kwargs)
-  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask_admin/base.py", line 452, in index
-    return self.render(self._template)
-  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask_admin/base.py", line 308, in render
-    return render_template(template, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/ubuntu/blog/app/main/routes.py", line 45, in index
+    prev_url=prev_url)
   File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/templating.py", line 140, in render_template
     ctx.app,
   File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/templating.py", line 120, in _render
@@ -32,44 +28,108 @@ Traceback (most recent call last):
     reraise(exc_type, exc_value, tb)
   File "/home/ubuntu/.local/lib/python3.7/site-packages/jinja2/_compat.py", line 37, in reraise
     raise value.with_traceback(tb)
-  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask_admin/templates/bootstrap3/admin/index.html", line 1, in top-level template code
-    {% extends 'admin/master.html' %}
+  File "/home/ubuntu/blog/app/templates/base.html", line 81, in template
+    {% block content %}
   File "/home/ubuntu/.local/lib/python3.7/site-packages/jinja2/environment.py", line 1005, in render
     return concat(self.root_render_func(self.new_context(vars)))
-  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask_admin/templates/bootstrap3/admin/index.html", line 14, in root
-  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask_admin/templates/bootstrap3/admin/master.html", line 15, in root
-  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask_admin/templates/bootstrap3/admin/base.html", line 16, in root
-    {%if config.get('FLASK_ADMIN_SWATCH', 'default') == 'default' %}
-  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask_admin/templates/bootstrap3/admin/base.html", line 44, in block_title
-    <span class="sr-only">Toggle navigation</span>
-  File "/home/ubuntu/.local/lib/python3.7/site-packages/markupsafe/_native.py", line 20, in escape
-    if hasattr(s, '__html__'):
-  File "/home/ubuntu/.local/lib/python3.7/site-packages/speaklater.py", line 177, in __getattr__
-    return getattr(self.value, name)
-  File "/home/ubuntu/.local/lib/python3.7/site-packages/speaklater.py", line 177, in __getattr__
-    return getattr(self.value, name)
-  File "/home/ubuntu/.local/lib/python3.7/site-packages/speaklater.py", line 177, in __getattr__
-    return getattr(self.value, name)
-  [Previous line repeated 471 more times]
-  File "/home/ubuntu/.local/lib/python3.7/site-packages/speaklater.py", line 115, in <lambda>
-    value = property(lambda x: x._func(*x._args, **x._kwargs))
-  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask_babelex/__init__.py", line 533, in gettext
-    t = self.get_translations()
-  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask_babelex/__init__.py", line 510, in get_translations
-    locale = get_locale()
-  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask_babelex/__init__.py", line 220, in get_locale
-    rv = babel.locale_selector_func()
-  File "/home/ubuntu/blog/app/__init__.py", line 72, in get_locale
-    return request.accept_languages.best_match(current_app.config['LANGUAGES'])
-  File "/home/ubuntu/.local/lib/python3.7/site-packages/werkzeug/local.py", line 348, in __getattr__
-    return getattr(self._get_current_object(), name)
-  File "/home/ubuntu/.local/lib/python3.7/site-packages/werkzeug/local.py", line 307, in _get_current_object
-    return self.__local()
-  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/globals.py", line 36, in _lookup_req_object
-    top = _request_ctx_stack.top
-  File "/home/ubuntu/.local/lib/python3.7/site-packages/werkzeug/local.py", line 169, in top
-    return self._local.stack[-1]
-  File "/home/ubuntu/.local/lib/python3.7/site-packages/werkzeug/local.py", line 72, in __getattr__
-    return self.__storage__[self.__ident_func__()][name]
-RecursionError: maximum recursion depth exceeded while calling a Python object
-2019-11-27 09:38:27,367 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:66]
+  File "/home/ubuntu/blog/app/templates/index.html", line 12, in root
+    {% if form %}
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/jinja2/loaders.py", line 125, in load
+    code = environment.compile(source, name, filename)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/jinja2/environment.py", line 591, in compile
+    self.handle_exception(exc_info, source_hint=source_hint)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/home/ubuntu/blog/app/templates/base.html", line 81, in template
+    {% block content %}
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/jinja2/environment.py", line 543, in _generate
+    optimized=self.optimized)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/jinja2/compiler.py", line 82, in generate
+    generator.visit(node)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/jinja2/visitor.py", line 38, in visit
+    return f(node, *args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/jinja2/compiler.py", line 718, in visit_Template
+    self.fail('block %r defined twice' % block.name, block.lineno)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/jinja2/compiler.py", line 315, in fail
+    raise TemplateAssertionError(msg, lineno, self.name, self.filename)
+jinja2.exceptions.TemplateAssertionError: block 'content' defined twice
+2019-12-01 11:48:25,996 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:66]
+2019-12-01 11:49:11,683 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:66]
+2019-12-01 11:50:27,812 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:66]
+2019-12-01 11:51:29,384 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:66]
+2019-12-01 11:52:10,678 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:66]
+2019-12-01 11:57:51,376 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:66]
+2019-12-01 11:57:53,474 ERROR: Exception on /auth/login [GET] [in /home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/blog/app/auth/routes.py", line 28, in login
+    return render_template('auth/login.html', title=_('Sign In'), form=form)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/templating.py", line 140, in render_template
+    ctx.app,
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/templating.py", line 120, in _render
+    rv = template.render(context)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/home/ubuntu/blog/app/templates/base.html", line 80, in template
+    {% block content %}
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/jinja2/environment.py", line 1005, in render
+    return concat(self.root_render_func(self.new_context(vars)))
+  File "/home/ubuntu/blog/app/templates/auth/login.html", line 12, in root
+    {{ wtf.quick_form(form) }}
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/jinja2/loaders.py", line 125, in load
+    code = environment.compile(source, name, filename)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/jinja2/environment.py", line 591, in compile
+    self.handle_exception(exc_info, source_hint=source_hint)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/home/ubuntu/blog/app/templates/base.html", line 80, in template
+    {% block content %}
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/jinja2/environment.py", line 543, in _generate
+    optimized=self.optimized)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/jinja2/compiler.py", line 82, in generate
+    generator.visit(node)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/jinja2/visitor.py", line 38, in visit
+    return f(node, *args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/jinja2/compiler.py", line 718, in visit_Template
+    self.fail('block %r defined twice' % block.name, block.lineno)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/jinja2/compiler.py", line 315, in fail
+    raise TemplateAssertionError(msg, lineno, self.name, self.filename)
+jinja2.exceptions.TemplateAssertionError: block 'content' defined twice
+2019-12-01 11:58:42,570 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:66]
+2019-12-01 12:02:44,188 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:66]
+2019-12-01 12:03:24,795 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:66]
+2019-12-01 12:06:24,996 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:66]
+2019-12-01 12:07:23,579 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:66]
+2019-12-01 12:07:40,508 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:66]
+2019-12-01 12:08:35,295 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:66]
+2019-12-01 12:09:32,404 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:66]
+2019-12-01 12:09:51,507 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:66]
