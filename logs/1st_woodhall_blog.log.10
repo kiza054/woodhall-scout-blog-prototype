@@ -1,16 +1,4 @@
-2019-12-12 16:03:06,613 INFO: 1st Woodhall Blog Startup [in /home/kiza054/programming/python/flask/woodhall-scout-blog/app/__init__.py:62]
-2019-12-12 16:03:06,627 INFO: 1st Woodhall Blog Startup [in /home/kiza054/programming/python/flask/woodhall-scout-blog/app/__init__.py:80]
-2019-12-12 16:03:06,627 INFO: 1st Woodhall Blog Startup [in /home/kiza054/programming/python/flask/woodhall-scout-blog/app/__init__.py:80]
-2019-12-16 13:48:04,467 INFO: 1st Woodhall Blog Startup [in /home/kiza054/programming/python/flask/woodhall-scout-blog/app/__init__.py:66]
-2019-12-16 13:48:04,502 INFO: 1st Woodhall Blog Startup [in /home/kiza054/programming/python/flask/woodhall-scout-blog/app/__init__.py:84]
-2019-12-16 13:48:04,502 INFO: 1st Woodhall Blog Startup [in /home/kiza054/programming/python/flask/woodhall-scout-blog/app/__init__.py:84]
-2019-12-16 13:48:18,955 INFO: 1st Woodhall Blog Startup [in /home/kiza054/programming/python/flask/woodhall-scout-blog/app/__init__.py:66]
-2019-12-16 13:48:18,956 INFO: 1st Woodhall Blog Startup [in /home/kiza054/programming/python/flask/woodhall-scout-blog/app/__init__.py:84]
-2019-12-16 13:48:18,956 INFO: 1st Woodhall Blog Startup [in /home/kiza054/programming/python/flask/woodhall-scout-blog/app/__init__.py:84]
-2019-12-18 12:31:59,003 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/woodhall-scout-blog-prototype/app/__init__.py:62]
-2019-12-18 12:31:59,003 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/woodhall-scout-blog-prototype/app/__init__.py:80]
-2019-12-18 12:31:59,003 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/woodhall-scout-blog-prototype/app/__init__.py:80]
-2019-12-18 12:32:02,839 ERROR: Exception on /auth/login [GET] [in /home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py:1891]
+2019-12-18 12:33:36,634 ERROR: Exception on /auth/login [GET] [in /home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py:1891]
 Traceback (most recent call last):
   File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
     response = self.full_dispatch_request()
@@ -59,7 +47,7 @@ Traceback (most recent call last):
   File "/home/ubuntu/.local/lib/python3.7/site-packages/werkzeug/routing.py", line 2020, in build
     raise BuildError(endpoint, values, method, self)
 werkzeug.routing.BuildError: Could not build url for endpoint 'home'. Did you mean 'main.user' instead?
-2019-12-18 12:32:02,839 ERROR: Exception on /auth/login [GET] [in /home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py:1891]
+2019-12-18 12:33:37,950 ERROR: Exception on /auth/login [GET] [in /home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py:1891]
 Traceback (most recent call last):
   File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
     response = self.full_dispatch_request()
@@ -108,3 +96,6 @@ Traceback (most recent call last):
   File "/home/ubuntu/.local/lib/python3.7/site-packages/werkzeug/routing.py", line 2020, in build
     raise BuildError(endpoint, values, method, self)
 werkzeug.routing.BuildError: Could not build url for endpoint 'home'. Did you mean 'main.user' instead?
+2019-12-18 12:36:25,693 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/woodhall-scout-blog-prototype/app/__init__.py:62]
+2019-12-18 12:36:25,693 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/woodhall-scout-blog-prototype/app/__init__.py:80]
+2019-12-18 12:36:25,693 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/woodhall-scout-blog-prototype/app/__init__.py:80]

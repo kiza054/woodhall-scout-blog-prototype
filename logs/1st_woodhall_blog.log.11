@@ -1,17 +1,4 @@
-2019-12-04 16:16:40,173 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:85]
-2019-12-04 16:16:55,497 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:67]
-2019-12-04 16:16:55,497 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:85]
-2019-12-04 16:16:55,497 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:85]
-2019-12-04 16:28:12,404 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:67]
-2019-12-04 16:28:12,405 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:85]
-2019-12-04 16:28:12,405 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:85]
-2019-12-04 16:28:21,187 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:67]
-2019-12-04 16:28:21,187 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:85]
-2019-12-04 16:28:21,187 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:85]
-2019-12-04 16:29:56,977 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:67]
-2019-12-04 16:29:56,977 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:85]
-2019-12-04 16:29:56,977 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:85]
-2019-12-04 17:31:18,762 ERROR: Exception on /export_posts [GET] [in /home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py:1891]
+2019-12-18 12:33:36,634 ERROR: Exception on /auth/login [GET] [in /home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py:1891]
 Traceback (most recent call last):
   File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
     response = self.full_dispatch_request()
@@ -25,14 +12,42 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py", line 1935, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask_login/utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "/home/ubuntu/blog/app/main/routes.py", line 147, in export_posts
-    msg = Message(author=current_user, recipient=user,
-  File "/home/ubuntu/blog/app/models.py", line 116, in launch_task
-    return Message.query.filter_by(recipient=self).filter(
-AttributeError: 'Flask' object has no attribute 'task_queue'
-2019-12-04 17:31:18,762 ERROR: Exception on /export_posts [GET] [in /home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py:1891]
+  File "/home/ubuntu/woodhall-scout-blog-prototype/app/auth/routes.py", line 28, in login
+    return render_template('auth/login.html', title=_('Sign In'), form=form)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/templating.py", line 140, in render_template
+    ctx.app,
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/templating.py", line 120, in _render
+    rv = template.render(context)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/home/ubuntu/woodhall-scout-blog-prototype/app/templates/auth/login.html", line 2, in top-level template code
+    {% include 'nav.html' %}
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/jinja2/environment.py", line 1005, in render
+    return concat(self.root_render_func(self.new_context(vars)))
+  File "/home/ubuntu/woodhall-scout-blog-prototype/app/templates/auth/login.html", line 16, in root
+    <br>
+  File "/home/ubuntu/woodhall-scout-blog-prototype/app/templates/nav.html", line 20, in root
+    {% else %}
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/jinja2/runtime.py", line 262, in call
+    return __obj(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/helpers.py", line 370, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py", line 2215, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/helpers.py", line 358, in url_for
+    endpoint, values, method=method, force_external=external
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/werkzeug/routing.py", line 2020, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'home'. Did you mean 'main.user' instead?
+2019-12-18 12:33:37,950 ERROR: Exception on /auth/login [GET] [in /home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py:1891]
 Traceback (most recent call last):
   File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
     response = self.full_dispatch_request()
@@ -46,64 +61,38 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py", line 1935, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask_login/utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "/home/ubuntu/blog/app/main/routes.py", line 147, in export_posts
-    msg = Message(author=current_user, recipient=user,
-  File "/home/ubuntu/blog/app/models.py", line 116, in launch_task
-    return Message.query.filter_by(recipient=self).filter(
-AttributeError: 'Flask' object has no attribute 'task_queue'
-2019-12-04 17:31:28,268 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:62]
-2019-12-04 17:31:28,268 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:80]
-2019-12-04 17:31:28,268 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:80]
-2019-12-04 17:34:10,811 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:62]
-2019-12-04 17:34:10,812 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:80]
-2019-12-04 17:34:10,812 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:80]
-2019-12-04 17:34:20,603 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:62]
-2019-12-04 17:34:20,603 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:80]
-2019-12-04 17:34:20,603 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:80]
-2019-12-05 21:27:18,366 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:62]
-2019-12-05 21:27:18,366 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:80]
-2019-12-05 21:27:18,366 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:80]
-2019-12-05 21:27:32,888 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:62]
-2019-12-05 21:27:32,888 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:80]
-2019-12-05 21:27:32,888 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:80]
-2019-12-05 21:44:45,072 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:62]
-2019-12-05 21:44:45,072 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:80]
-2019-12-05 21:44:45,072 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:80]
-2019-12-05 21:45:14,193 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:62]
-2019-12-05 21:45:14,193 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:80]
-2019-12-05 21:45:14,193 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:80]
-2019-12-05 21:50:04,578 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:62]
-2019-12-05 21:50:04,578 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:80]
-2019-12-05 21:50:04,578 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:80]
-2019-12-05 21:50:19,976 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:62]
-2019-12-05 21:50:19,976 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:80]
-2019-12-05 21:50:19,976 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:80]
-2019-12-05 21:50:39,681 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:62]
-2019-12-05 21:50:39,681 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:80]
-2019-12-05 21:50:39,681 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:80]
-2019-12-05 22:15:21,700 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:62]
-2019-12-05 22:15:21,700 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:80]
-2019-12-05 22:15:21,700 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:80]
-2019-12-10 11:26:53,413 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:62]
-2019-12-10 11:26:53,413 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:80]
-2019-12-10 11:26:53,413 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:80]
-2019-12-11 13:52:44,127 INFO: 1st Woodhall Blog Startup [in /home/kiza054/programming/python/flask/blog/app/__init__.py:62]
-2019-12-11 13:52:44,137 INFO: 1st Woodhall Blog Startup [in /home/kiza054/programming/python/flask/blog/app/__init__.py:80]
-2019-12-11 13:52:44,137 INFO: 1st Woodhall Blog Startup [in /home/kiza054/programming/python/flask/blog/app/__init__.py:80]
-2019-12-11 13:52:44,161 INFO: 1st Woodhall Blog Startup [in /home/kiza054/programming/python/flask/blog/app/__init__.py:62]
-2019-12-11 13:52:44,162 INFO: 1st Woodhall Blog Startup [in /home/kiza054/programming/python/flask/blog/app/__init__.py:80]
-2019-12-11 13:52:44,162 INFO: 1st Woodhall Blog Startup [in /home/kiza054/programming/python/flask/blog/app/__init__.py:80]
-2019-12-12 14:14:59,057 INFO: 1st Woodhall Blog Startup [in /home/kiza054/programming/python/flask/woodhall-scout-blog/app/__init__.py:62]
-2019-12-12 14:14:59,072 INFO: 1st Woodhall Blog Startup [in /home/kiza054/programming/python/flask/woodhall-scout-blog/app/__init__.py:80]
-2019-12-12 14:14:59,072 INFO: 1st Woodhall Blog Startup [in /home/kiza054/programming/python/flask/woodhall-scout-blog/app/__init__.py:80]
-2019-12-12 14:14:59,623 INFO: 1st Woodhall Blog Startup [in /home/kiza054/programming/python/flask/woodhall-scout-blog/app/__init__.py:62]
-2019-12-12 14:14:59,624 INFO: 1st Woodhall Blog Startup [in /home/kiza054/programming/python/flask/woodhall-scout-blog/app/__init__.py:80]
-2019-12-12 14:14:59,624 INFO: 1st Woodhall Blog Startup [in /home/kiza054/programming/python/flask/woodhall-scout-blog/app/__init__.py:80]
-2019-12-12 15:58:56,489 INFO: 1st Woodhall Blog Startup [in /home/kiza054/programming/python/flask/woodhall-scout-blog/app/__init__.py:62]
-2019-12-12 15:58:56,490 INFO: 1st Woodhall Blog Startup [in /home/kiza054/programming/python/flask/woodhall-scout-blog/app/__init__.py:80]
-2019-12-12 15:58:56,490 INFO: 1st Woodhall Blog Startup [in /home/kiza054/programming/python/flask/woodhall-scout-blog/app/__init__.py:80]
-2019-12-12 16:03:06,581 INFO: 1st Woodhall Blog Startup [in /home/kiza054/programming/python/flask/woodhall-scout-blog/app/__init__.py:62]
-2019-12-12 16:03:06,598 INFO: 1st Woodhall Blog Startup [in /home/kiza054/programming/python/flask/woodhall-scout-blog/app/__init__.py:80]
-2019-12-12 16:03:06,598 INFO: 1st Woodhall Blog Startup [in /home/kiza054/programming/python/flask/woodhall-scout-blog/app/__init__.py:80]
+  File "/home/ubuntu/woodhall-scout-blog-prototype/app/auth/routes.py", line 28, in login
+    return render_template('auth/login.html', title=_('Sign In'), form=form)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/templating.py", line 140, in render_template
+    ctx.app,
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/templating.py", line 120, in _render
+    rv = template.render(context)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/home/ubuntu/woodhall-scout-blog-prototype/app/templates/auth/login.html", line 2, in top-level template code
+    {% include 'nav.html' %}
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/jinja2/environment.py", line 1005, in render
+    return concat(self.root_render_func(self.new_context(vars)))
+  File "/home/ubuntu/woodhall-scout-blog-prototype/app/templates/auth/login.html", line 16, in root
+    <br>
+  File "/home/ubuntu/woodhall-scout-blog-prototype/app/templates/nav.html", line 20, in root
+    {% else %}
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/jinja2/runtime.py", line 262, in call
+    return __obj(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/helpers.py", line 370, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py", line 2215, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/helpers.py", line 358, in url_for
+    endpoint, values, method=method, force_external=external
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/werkzeug/routing.py", line 2020, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'home'. Did you mean 'main.user' instead?

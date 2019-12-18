@@ -55,7 +55,7 @@ Flask-Uploads
 Flask-WhooshAlchemy
 Flask-WTF
 future
-guess-language-spirit
+guess_language-spirit
 gunicorn
 httpie
 icdiff
