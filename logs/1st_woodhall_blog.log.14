@@ -1,1 +1,109 @@
-2019-12-03 16:51:44,567 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:83]
+2019-12-04 16:16:40,173 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:85]
+2019-12-04 16:16:55,497 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:67]
+2019-12-04 16:16:55,497 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:85]
+2019-12-04 16:16:55,497 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:85]
+2019-12-04 16:28:12,404 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:67]
+2019-12-04 16:28:12,405 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:85]
+2019-12-04 16:28:12,405 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:85]
+2019-12-04 16:28:21,187 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:67]
+2019-12-04 16:28:21,187 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:85]
+2019-12-04 16:28:21,187 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:85]
+2019-12-04 16:29:56,977 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:67]
+2019-12-04 16:29:56,977 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:85]
+2019-12-04 16:29:56,977 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:85]
+2019-12-04 17:31:18,762 ERROR: Exception on /export_posts [GET] [in /home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/ubuntu/blog/app/main/routes.py", line 147, in export_posts
+    msg = Message(author=current_user, recipient=user,
+  File "/home/ubuntu/blog/app/models.py", line 116, in launch_task
+    return Message.query.filter_by(recipient=self).filter(
+AttributeError: 'Flask' object has no attribute 'task_queue'
+2019-12-04 17:31:18,762 ERROR: Exception on /export_posts [GET] [in /home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/ubuntu/blog/app/main/routes.py", line 147, in export_posts
+    msg = Message(author=current_user, recipient=user,
+  File "/home/ubuntu/blog/app/models.py", line 116, in launch_task
+    return Message.query.filter_by(recipient=self).filter(
+AttributeError: 'Flask' object has no attribute 'task_queue'
+2019-12-04 17:31:28,268 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:62]
+2019-12-04 17:31:28,268 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:80]
+2019-12-04 17:31:28,268 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:80]
+2019-12-04 17:34:10,811 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:62]
+2019-12-04 17:34:10,812 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:80]
+2019-12-04 17:34:10,812 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:80]
+2019-12-04 17:34:20,603 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:62]
+2019-12-04 17:34:20,603 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:80]
+2019-12-04 17:34:20,603 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:80]
+2019-12-05 21:27:18,366 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:62]
+2019-12-05 21:27:18,366 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:80]
+2019-12-05 21:27:18,366 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:80]
+2019-12-05 21:27:32,888 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:62]
+2019-12-05 21:27:32,888 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:80]
+2019-12-05 21:27:32,888 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:80]
+2019-12-05 21:44:45,072 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:62]
+2019-12-05 21:44:45,072 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:80]
+2019-12-05 21:44:45,072 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:80]
+2019-12-05 21:45:14,193 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:62]
+2019-12-05 21:45:14,193 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:80]
+2019-12-05 21:45:14,193 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:80]
+2019-12-05 21:50:04,578 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:62]
+2019-12-05 21:50:04,578 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:80]
+2019-12-05 21:50:04,578 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:80]
+2019-12-05 21:50:19,976 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:62]
+2019-12-05 21:50:19,976 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:80]
+2019-12-05 21:50:19,976 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:80]
+2019-12-05 21:50:39,681 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:62]
+2019-12-05 21:50:39,681 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:80]
+2019-12-05 21:50:39,681 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:80]
+2019-12-05 22:15:21,700 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:62]
+2019-12-05 22:15:21,700 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:80]
+2019-12-05 22:15:21,700 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:80]
+2019-12-10 11:26:53,413 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:62]
+2019-12-10 11:26:53,413 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:80]
+2019-12-10 11:26:53,413 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/blog/app/__init__.py:80]
+2019-12-11 13:52:44,127 INFO: 1st Woodhall Blog Startup [in /home/kiza054/programming/python/flask/blog/app/__init__.py:62]
+2019-12-11 13:52:44,137 INFO: 1st Woodhall Blog Startup [in /home/kiza054/programming/python/flask/blog/app/__init__.py:80]
+2019-12-11 13:52:44,137 INFO: 1st Woodhall Blog Startup [in /home/kiza054/programming/python/flask/blog/app/__init__.py:80]
+2019-12-11 13:52:44,161 INFO: 1st Woodhall Blog Startup [in /home/kiza054/programming/python/flask/blog/app/__init__.py:62]
+2019-12-11 13:52:44,162 INFO: 1st Woodhall Blog Startup [in /home/kiza054/programming/python/flask/blog/app/__init__.py:80]
+2019-12-11 13:52:44,162 INFO: 1st Woodhall Blog Startup [in /home/kiza054/programming/python/flask/blog/app/__init__.py:80]
+2019-12-12 14:14:59,057 INFO: 1st Woodhall Blog Startup [in /home/kiza054/programming/python/flask/woodhall-scout-blog/app/__init__.py:62]
+2019-12-12 14:14:59,072 INFO: 1st Woodhall Blog Startup [in /home/kiza054/programming/python/flask/woodhall-scout-blog/app/__init__.py:80]
+2019-12-12 14:14:59,072 INFO: 1st Woodhall Blog Startup [in /home/kiza054/programming/python/flask/woodhall-scout-blog/app/__init__.py:80]
+2019-12-12 14:14:59,623 INFO: 1st Woodhall Blog Startup [in /home/kiza054/programming/python/flask/woodhall-scout-blog/app/__init__.py:62]
+2019-12-12 14:14:59,624 INFO: 1st Woodhall Blog Startup [in /home/kiza054/programming/python/flask/woodhall-scout-blog/app/__init__.py:80]
+2019-12-12 14:14:59,624 INFO: 1st Woodhall Blog Startup [in /home/kiza054/programming/python/flask/woodhall-scout-blog/app/__init__.py:80]
+2019-12-12 15:58:56,489 INFO: 1st Woodhall Blog Startup [in /home/kiza054/programming/python/flask/woodhall-scout-blog/app/__init__.py:62]
+2019-12-12 15:58:56,490 INFO: 1st Woodhall Blog Startup [in /home/kiza054/programming/python/flask/woodhall-scout-blog/app/__init__.py:80]
+2019-12-12 15:58:56,490 INFO: 1st Woodhall Blog Startup [in /home/kiza054/programming/python/flask/woodhall-scout-blog/app/__init__.py:80]
+2019-12-12 16:03:06,581 INFO: 1st Woodhall Blog Startup [in /home/kiza054/programming/python/flask/woodhall-scout-blog/app/__init__.py:62]
+2019-12-12 16:03:06,598 INFO: 1st Woodhall Blog Startup [in /home/kiza054/programming/python/flask/woodhall-scout-blog/app/__init__.py:80]
+2019-12-12 16:03:06,598 INFO: 1st Woodhall Blog Startup [in /home/kiza054/programming/python/flask/woodhall-scout-blog/app/__init__.py:80]

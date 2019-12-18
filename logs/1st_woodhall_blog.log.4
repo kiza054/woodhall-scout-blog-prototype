@@ -1,4 +1,4 @@
-2019-12-18 12:45:20,001 ERROR: Exception on /edit_profile [GET] [in /home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py:1891]
+2019-12-18 13:00:15,075 ERROR: Exception on /home [GET] [in /home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py:1891]
 Traceback (most recent call last):
   File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
     response = self.full_dispatch_request()
@@ -14,8 +14,8 @@ Traceback (most recent call last):
     return self.view_functions[rule.endpoint](**req.view_args)
   File "/home/ubuntu/.local/lib/python3.7/site-packages/flask_login/utils.py", line 261, in decorated_view
     return func(*args, **kwargs)
-  File "/home/ubuntu/woodhall-scout-blog-prototype/app/main/routes.py", line 101, in edit_profile
-    form=form)
+  File "/home/ubuntu/woodhall-scout-blog-prototype/app/main/routes.py", line 45, in index
+    prev_url=prev_url)
   File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/templating.py", line 140, in render_template
     ctx.app,
   File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/templating.py", line 120, in _render
@@ -28,49 +28,18 @@ Traceback (most recent call last):
     reraise(exc_type, exc_value, tb)
   File "/home/ubuntu/.local/lib/python3.7/site-packages/jinja2/_compat.py", line 37, in reraise
     raise value.with_traceback(tb)
-  File "/home/ubuntu/woodhall-scout-blog-prototype/app/templates/edit_profile.html", line 1, in top-level template code
-    {% extends "base.html" %}
-  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/templating.py", line 60, in get_source
-    return self._get_source_fast(environment, template)
-  File "/home/ubuntu/.local/lib/python3.7/site-packages/flask/templating.py", line 89, in _get_source_fast
-    raise TemplateNotFound(template)
-jinja2.exceptions.TemplateNotFound: base.html
-2019-12-18 12:46:22,309 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/woodhall-scout-blog-prototype/app/__init__.py:62]
-2019-12-18 12:46:22,310 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/woodhall-scout-blog-prototype/app/__init__.py:80]
-2019-12-18 12:46:22,310 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/woodhall-scout-blog-prototype/app/__init__.py:80]
-2019-12-18 12:46:51,975 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/woodhall-scout-blog-prototype/app/__init__.py:62]
-2019-12-18 12:46:51,976 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/woodhall-scout-blog-prototype/app/__init__.py:80]
-2019-12-18 12:46:51,976 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/woodhall-scout-blog-prototype/app/__init__.py:80]
-2019-12-18 12:48:07,501 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/woodhall-scout-blog-prototype/app/__init__.py:62]
-2019-12-18 12:48:07,502 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/woodhall-scout-blog-prototype/app/__init__.py:80]
-2019-12-18 12:48:07,502 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/woodhall-scout-blog-prototype/app/__init__.py:80]
-2019-12-18 12:48:31,284 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/woodhall-scout-blog-prototype/app/__init__.py:62]
-2019-12-18 12:48:31,284 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/woodhall-scout-blog-prototype/app/__init__.py:80]
-2019-12-18 12:48:31,284 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/woodhall-scout-blog-prototype/app/__init__.py:80]
-2019-12-18 12:50:34,590 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/woodhall-scout-blog-prototype/app/__init__.py:62]
-2019-12-18 12:50:34,591 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/woodhall-scout-blog-prototype/app/__init__.py:80]
-2019-12-18 12:50:34,591 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/woodhall-scout-blog-prototype/app/__init__.py:80]
-2019-12-18 12:51:40,267 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/woodhall-scout-blog-prototype/app/__init__.py:62]
-2019-12-18 12:51:40,267 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/woodhall-scout-blog-prototype/app/__init__.py:80]
-2019-12-18 12:51:40,267 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/woodhall-scout-blog-prototype/app/__init__.py:80]
-2019-12-18 12:52:27,898 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/woodhall-scout-blog-prototype/app/__init__.py:62]
-2019-12-18 12:52:27,898 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/woodhall-scout-blog-prototype/app/__init__.py:80]
-2019-12-18 12:52:27,898 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/woodhall-scout-blog-prototype/app/__init__.py:80]
-2019-12-18 12:53:14,099 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/woodhall-scout-blog-prototype/app/__init__.py:62]
-2019-12-18 12:53:14,099 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/woodhall-scout-blog-prototype/app/__init__.py:80]
-2019-12-18 12:53:14,099 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/woodhall-scout-blog-prototype/app/__init__.py:80]
-2019-12-18 12:54:02,766 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/woodhall-scout-blog-prototype/app/__init__.py:62]
-2019-12-18 12:54:02,766 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/woodhall-scout-blog-prototype/app/__init__.py:80]
-2019-12-18 12:54:02,766 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/woodhall-scout-blog-prototype/app/__init__.py:80]
-2019-12-18 12:55:11,884 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/woodhall-scout-blog-prototype/app/__init__.py:62]
-2019-12-18 12:55:11,884 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/woodhall-scout-blog-prototype/app/__init__.py:80]
-2019-12-18 12:55:11,884 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/woodhall-scout-blog-prototype/app/__init__.py:80]
-2019-12-18 12:55:36,475 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/woodhall-scout-blog-prototype/app/__init__.py:62]
-2019-12-18 12:55:36,475 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/woodhall-scout-blog-prototype/app/__init__.py:80]
-2019-12-18 12:55:36,475 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/woodhall-scout-blog-prototype/app/__init__.py:80]
-2019-12-18 12:56:32,911 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/woodhall-scout-blog-prototype/app/__init__.py:62]
-2019-12-18 12:56:32,911 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/woodhall-scout-blog-prototype/app/__init__.py:80]
-2019-12-18 12:56:32,911 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/woodhall-scout-blog-prototype/app/__init__.py:80]
-2019-12-18 13:00:12,910 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/woodhall-scout-blog-prototype/app/__init__.py:62]
-2019-12-18 13:00:12,910 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/woodhall-scout-blog-prototype/app/__init__.py:80]
-2019-12-18 13:00:12,910 INFO: 1st Woodhall Blog Startup [in /home/ubuntu/woodhall-scout-blog-prototype/app/__init__.py:80]
+  File "/home/ubuntu/woodhall-scout-blog-prototype/app/templates/index.html", line 2, in top-level template code
+    {% include 'header.html' %}
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/jinja2/environment.py", line 1005, in render
+    return concat(self.root_render_func(self.new_context(vars)))
+  File "/home/ubuntu/woodhall-scout-blog-prototype/app/templates/index.html", line 21, in root
+    <br>
+  File "/home/ubuntu/woodhall-scout-blog-prototype/app/templates/header.html", line 19, in root
+    {% block content %}
+  File "/home/ubuntu/woodhall-scout-blog-prototype/app/templates/header.html", line 65, in block_scripts
+    elem.popover({
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/jinja2/runtime.py", line 262, in call
+    return __obj(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.7/site-packages/jinja2/runtime.py", line 630, in _fail_with_undefined_error
+    raise self._undefined_exception(hint)
+jinja2.exceptions.UndefinedError: there is no parent block called 'scripts'.
