@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+<center>
+    <div class="content-section">
+        <div class="media">
+            <div class="media-body">
+                <h1>{{ _('Page Not Found') }}</h1>
+                <p><a href="{{ url_for('main.index') }}">{{ _('Back') }}</a></p>
+            </div>
+        </div>
+    </div>
+</center>
+{% endblock %}
