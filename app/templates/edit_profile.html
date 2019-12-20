@@ -1,9 +1,12 @@
-{% extends "base.html" %}
 {% import 'bootstrap/wtf.html' as wtf %}
+{% include 'header.html' %}
 
 {% block app_content %}
-<center>
-    <div class="content-section">
+<body>
+    {% include 'nav.html' %}
+    <center>
+      {% include 'sidebar.html' %}
+      <div class="content-section">
         <div class="media">
             <div class="media-body">
                 <h1>{{ _('Edit Profile') }}</h1>
@@ -16,4 +19,5 @@
         </div>
     </div>
 </center>
+{% include 'footer.html' %}
 {% endblock %}
